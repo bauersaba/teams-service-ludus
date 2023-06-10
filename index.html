@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>API Teams</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" style="margin: auto; text-align: center;">
+    <h2>Seja bem-vindo a API de times!</h2>
+</div>
+
+<hr><br/>
+
+
+<div class="container">
+  <h5>Segue abaixo como podemos consumir a nossa API</h5>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>API</th>
+        <th>Método</th>
+        <th>Exemplo Body</th>
+        <th>Funcionalidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>127.0.0.1:8100</td>
+        <td><span class="badge badge-info">GET</span></td>
+        <td>-</td>
+        <td>Tela inicial</td>
+      </tr>
+      <tr>
+        <td>127.0.0.1:8100/api/coach</td>
+        <td><span class="badge badge-info">GET</span></td>
+        <td>-</td>
+        <td>Listar coaches</td>
+      </tr>
+       <tr>
+        <td>127.0.0.1:8100/api/coach</td>
+        <td><span class="badge badge-success">POST</span></td>
+        <td>
+          <code>
+            {
+              "name": "novo coach",
+              "age": 32
+            }
+          </code>
+        </td>
+        <td>Adicionar coach</td>
+      </tr>
+      <tr>
+        <td>127.0.0.1:8100/api/coach</td>
+        <td><span class="badge badge-light">PUT</span></td>
+        <td>
+          <code>
+            {
+              "coach_id": 1,
+              "name": "coach",
+              "age": 32
+            }
+          </code>
+        </td>
+        <td>Alterar coach</td>
+      </tr>
+      <tr>
+        <td>127.0.0.1:8100/api/coach</td>
+        <td><span class="badge badge-danger">DELETE</span></td>
+        <td>
+          <code>
+            {
+              "coach_id": 1
+            }
+          </code>
+        </td>
+        <td>Deletar coach</td>
+      </tr>
+
+      <tr>
+        <td>127.0.0.1:8100/api/team</td>
+        <td><span class="badge badge-info">GET</span></td>
+        <td>-</td>
+        <td>Listar teams</td>
+      </tr>
+       <tr>
+        <td>127.0.0.1:8100/api/team</td>
+        <td><span class="badge badge-success">POST</span></td>
+        <td>
+          <code>
+            {
+              "coach_id": 3,
+              "popular_name": "Palmeiras",
+              "nickname_club": "Verdão",
+              "name_club": "Sociedade Esportiva Palmeiras",
+              "acronym_club": "SEP",
+              "shield_club": "palmeiras.png"
+            }
+          </code>
+        </td>
+        <td>Adicionar team</td>
+      </tr>
+      <tr>
+        <td>127.0.0.1:8100/api/team</td>
+        <td><span class="badge badge-light">PUT</span></td>
+        <td>
+          <code>
+            {
+              "team_id": 1,
+              "coach_id": 2,
+              "popular_name": "Palmeiras o maior da america",
+              "nickname_club": "Verdão",
+              "name_club": "Sociedade Esportiva Palmeiras",
+              "acronym_club": "SEP",
+              "shield_club": "palmeiras.png"
+            }
+          </code>
+        </td>
+        <td>Alterar team</td>
+      </tr>
+      <tr>
+        <td>127.0.0.1:8100/api/team</td>
+        <td><span class="badge badge-danger">DELETE</span></td>
+        <td>
+          <code>
+            {
+              "team_id": 1
+            }
+          </code>
+        </td>
+        <td>Deletar team</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
