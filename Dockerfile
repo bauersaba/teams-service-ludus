@@ -26,9 +26,9 @@ RUN composer install
 RUN php artisan key:generate
 
 # Generate Laravel table.
-COPY startdb.sh /usr/bin/startdb.sh
-RUN chmod +x /usr/bin/startdb.sh
-ENTRYPOINT ["startdb.sh"]
+# COPY startdb.sh /usr/bin/startdb.sh
+# RUN chmod +x /usr/bin/startdb.sh
+# ENTRYPOINT ["startdb.sh"]
 
 # Enable Apache modules and set document root
 RUN a2enmod rewrite
