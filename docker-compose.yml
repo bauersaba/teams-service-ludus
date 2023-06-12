@@ -13,6 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./create_db:/docker-entrypoint-initdb.d
       
   laravel:
     build: .
