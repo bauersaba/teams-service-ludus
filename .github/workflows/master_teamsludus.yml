@@ -22,15 +22,15 @@ jobs:
     - name: Log in to registry
       uses: docker/login-action@v2
       with:
-        registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_0f38dfa8f40849bfa9ad8a2eac231bf0 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_63e72e8339ca4746bff6b78294d64f4e }}
+        registry: https://teamsludus.azurecr.io/
+        username: ${{ secrets.AzureAppService_ContainerUsername_5e5109fb2d514efba7d7080cdba43f5f }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_fc48b2d2387d402d963c2954d97263d7 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_0f38dfa8f40849bfa9ad8a2eac231bf0 }}/php:${{ github.sha }}
+        tags: teamsludus.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_5e5109fb2d514efba7d7080cdba43f5f }}/teamludusapi:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'teamsludus'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d85b5ae0c83946679668299f1d2c5145 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_0f38dfa8f40849bfa9ad8a2eac231bf0 }}/php:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b5841e7b1c3d4581bc34a05320d4ac4e }}
+        images: 'teamsludus.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_5e5109fb2d514efba7d7080cdba43f5f }}/teamludusapi:${{ github.sha }}'
