@@ -27,7 +27,7 @@ RUN php artisan key:generate
 
 # Generate Laravel table.
 # COPY ./run.sh /usr/bin/run.sh
-RUN chmod +x ./laravel/run.sh
+# RUN chmod +x ./laravel/run.sh
 ENTRYPOINT ["run.sh"]
 
 # Enable Apache modules and set document root
