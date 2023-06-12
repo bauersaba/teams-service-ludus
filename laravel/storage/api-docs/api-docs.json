@@ -65,7 +65,12 @@
                     "422": {
                         "description": "Unprocessable entity"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             }
         },
         "/api/coach/{id}": {
@@ -101,7 +106,12 @@
                     "404": {
                         "description": "Coach not found"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "put": {
                 "tags": [
@@ -146,7 +156,12 @@
                     "404": {
                         "description": "Coach not found"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "delete": {
                 "tags": [
@@ -173,7 +188,12 @@
                     "404": {
                         "description": "Coach not found"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             }
         },
         "/api/team": {
@@ -197,7 +217,12 @@
                             }
                         }
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "post": {
                 "tags": [
@@ -230,7 +255,12 @@
                     "422": {
                         "description": "Unprocessable entity"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             }
         },
         "/api/team/{id}": {
@@ -266,7 +296,12 @@
                     "404": {
                         "description": "Team not found"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "put": {
                 "tags": [
@@ -311,7 +346,12 @@
                     "404": {
                         "description": "Team not found"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "delete": {
                 "tags": [
@@ -338,7 +378,12 @@
                     "404": {
                         "description": "Team not found"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             }
         }
     },
