@@ -26,9 +26,9 @@ RUN composer install
 RUN php artisan key:generate
 
 # Generate Laravel table.
-COPY ./run.sh /usr/bin/run.sh
-RUN chmod +x /usr/bin/run.sh
-ENTRYPOINT ["run.sh"]
+# COPY ./run.sh /usr/bin/run.sh
+# RUN chmod +x /usr/bin/run.sh
+# ENTRYPOINT ["run.sh"]
 
 # Enable Apache modules and set document root
 RUN a2enmod rewrite
